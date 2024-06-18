@@ -11,7 +11,7 @@ function EditReservation() {
 
   useEffect(() => {
     axios
-      .get("https://restaurant-reservation-backend-iiey.onrender.com/update-reservation/" + obj1.id)
+      .get("http://localhost:5000/update-reservation/" + obj1.id)
       .then((res) => {
         if (res.status === 200) {
           setName(res.data.name);
@@ -28,7 +28,7 @@ function EditReservation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const url = "https://restaurant-reservation-backend-iiey.onrender.com/reservationRoute/update-reservation/" + obj1.id;
+    const url = "http://localhost:5000/reservationRoute/update-reservation/" + obj1.id;
     const newData = { name, email, date };
     axios
       .put(url, newData)

@@ -13,7 +13,7 @@ function Signup  ({ userType })  {
 
   let handleSignup = (event) => {
     const obj = { name, email, password };
-    const url = "https://relish-backend-dc29.onrender.com/userRoute/";
+    const url = "https://restaurant-backend-one-1.onrender.com/userRoute/";
     axios
       .post(url, obj)
       .then((res) => {

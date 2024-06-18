@@ -8,7 +8,7 @@ function ReservationListDetails() {
 
   useEffect(() => {
     axios
-      .get("https://restaurant-reservation-backend-iiey.onrender.com/reservationRoute/reservation-details")
+      .get("https://restaurant-backend-one-1.onrender.com/reservationRoute/reservation-details")
       .then((response) => {
         setReservations(response.data);
       })
@@ -19,7 +19,7 @@ function ReservationListDetails() {
 
   const deleteReservation = (id) => {
     axios
-      .delete("https://restaurant-reservation-backend-iiey.onrender.com/reservationRoute/deletereservation/${id}")
+      .delete('https://restaurant-backend-one-1.onrender.com/reservationRoute/deletereservation/${id}')
       .then((response) => {
         if (response.status === 200) {
           alert("Reservation deleted successfully");

@@ -42,7 +42,7 @@ const ReservationForm = ({ addReservation }) => {
       date: new Date(date).toISOString(),
     };
 
-    const url = 'https://restaurant-reservation-backend-iiey.onrender.com/reservationRoute/create-reservation';
+    const url = 'http://localhost:5000/reservationRoute/create-reservation';
     axios
       .post(url, obj)
       .then((res) => {
