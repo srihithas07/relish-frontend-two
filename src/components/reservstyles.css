@@ -1,0 +1,24 @@
+.reservation-list-container {
+  margin: 20px;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reservation-table th, .reservation-table td {
+  background-color: #8367c7;
+  border: 2px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.reservation-table th {
+  background-color: #5603ad;
+}
+
+h2 {
+  color: #d90429;
+}

@@ -1,0 +1,97 @@
+/* ContactForm.css */
+.cnt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form {
+    flex: 0.3;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 400px;
+    padding: 50px;
+    width: 250px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  /* Style the entire section */
+.contact-us {
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  /* Style the heading */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the paragraph */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Style the list items */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

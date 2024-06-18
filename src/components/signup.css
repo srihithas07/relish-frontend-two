@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+  
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .signup-form {
+    flex: 0.5;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 580px;
+    padding: 20px;
+    width: 500px;  
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  

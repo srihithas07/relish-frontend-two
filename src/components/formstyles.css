@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* Overall styling for the form container */
+div {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Styling for the table selection buttons */
+  .table-buttons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .table-button {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: green;
+  }
+  
+  .table-button.booked {
+    background-color: red;
+    cursor: not-allowed;
+  }
+
+  .table-button.booked {
+    background-color: blueviolet;
+  }
+    
+  /* Styling for the form input fields */
+  nav > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  nav > div > * {
+    margin-right: 10px;
+  }
+  
+  /* Styling for the submit button */
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the links */
+  h4 > a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  h4 > a:hover {
+    color: #4caf50; /* Green color on hover */
+  }
+  

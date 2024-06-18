@@ -1,0 +1,8 @@
+.horizontal-form {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .form-group {
+    margin-right: 10px;
+  }

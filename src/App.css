@@ -1,0 +1,144 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('backgnd.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(123, 23, 185);
+  text-decoration: wavy;
+  text-shadow: 0cqw;
+  text-align: center;
+  padding: 50px;
+  
+}
+
+
+.navbar {
+  background-color: rgb(32, 2, 2);
+  padding: 1em;
+  opacity: 0.5;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 1em;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 200px; 
+}
+
+.auth-sections-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.auth-section {
+  width: 45%;
+  background-position: center;
+  padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.auth-section h2 {
+  text-align: center;
+  text-decoration: wavy;
+  color: rgb(0, 255, 200);
+  padding: 20px;
+  font-size:  45px;;
+}
+
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-form label {
+  margin-bottom: 5px;
+  color: red;
+  font-size:xx-large;
+  text-align: left;
+}
+
+.auth-form input {
+  padding: 20px;
+  margin-bottom: 5px;
+  border: 10px solid lightcyan;
+  border-radius: 50px;
+}
+
+.auth-form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #45a049;
+}
+
+.footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.table-management {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.table {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table.booked {
+  background-color: darkred;
+  color: white;
+}
+
+.table.unbooked {
+  background-color: lightgreen;
+  color: black;
+}

@@ -1,0 +1,58 @@
+/* body{
+    background: linear-gradient(135deg, #1B8AF1, #B58DED);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+} */
+body {
+  background-image: url("https://unsplash.com/photos/bear-plush-toy-on-dining-table-520xd_62Ic8");
+}
+
+.lgn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+    flex: 1;
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 500px;
+      
+  }
+
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+.btn{
+    margin-top: 28px;
+    width: 165px;
+    height: 60px;
+    border-radius: 30px;
+    background: #B58DED;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(181, 141, 237, 0.7), 0 6px 20px 0 rgba(181, 141, 237, 0.9);
+    cursor: pointer;
+}
+
+.login{
+    display: inline-block;
+    background: #FFFFFF;
+    width: 434px;
+    height: 700px;
+    margin-top: 10%;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

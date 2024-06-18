@@ -1,0 +1,50 @@
+/* homeStyles.css */
+
+.card {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Set the height to match the width for a square card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    margin: 0;
+  }
+/* homeStyles.css */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /* homeStyles.css */
+.menu-image-preview {
+  max-width: 100%;
+  height: 50%;
+}
+
+.menu-image {
+  max-width: 100%;
+  height: 50%;
+  /* Add additional styles for the full-size menu image if needed */
+}
+
+    

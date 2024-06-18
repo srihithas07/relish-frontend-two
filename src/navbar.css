@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'EB Garamond', serif; /* Updated to Garamond */
+  background-color: #001f3f; /* Navy blue background */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 70px; /* Slightly taller navbar */
+  background-color: #003366; /* Dark navy blue */
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+  margin-right: 40px; /* Adjusted spacing */
+}
+
+.nav-elements ul a {
+  font-size: 16px;
+  font-weight: 500; /* Slightly bolder font */
+  color: #150202; /* Light grey for text */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.nav-elements ul a:hover {
+  color: #1d0505; /* White text on hover */
+  background-color: #00509e; /* Lighter navy blue background on hover */
+  border-radius: 4px; /* Rounded corners on hover */
+}
+
+.nav-elements ul a.active {
+  color: #ffffff; /* White text */
+  font-weight: 600; /* Bolder font */
+  position: relative;
+}
+
+.nav-elements ul a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #66b2ff; /* Light blue underline */
+}
+
+@media (max-width: 768px) {
+  .nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff; /* White menu icon */
+    padding: 0 15px;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 70px; /* Adjusted to new navbar height */
+    background-color: #003366; /* Dark navy blue */
+    width: 0;
+    height: calc(100vh - 70px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Adding shadow to the sliding menu */
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
+
+  .nav-elements ul a {
+    padding: 10px;
+    font-size: 18px; /* Slightly larger font */
+  }
+}
