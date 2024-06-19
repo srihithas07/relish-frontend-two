@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { FaUser, FaEnvelope, FaCalendar } from 'react-icons/fa';
 import './formstyles.css';
 
-const ReservationForm = ({ addReservation }) => {
+const ReservationForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
@@ -24,25 +24,28 @@ const ReservationForm = ({ addReservation }) => {
     if (successMessage) {
       timeoutId = setTimeout(() => {
         closeSuccessMessage();
-      }, 50000); // Auto-close after 10 seconds
+      }, 10000); // Auto-close after 10 seconds
     }
 
     return () => {
       clearTimeout(timeoutId);
     };
   }, [successMessage]);
+
   const generateRandomCode = () => {
     return Math.floor(100000 + Math.random() * 900000); // Random 6-digit code
   };
 
-  let handleSubmit = (event) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
     const obj = {
       name,
       email,
       date: new Date(date).toISOString(),
     };
 
-    const url = 'http://localhost:5000/reservationRoute/create-reservation';
+    const url = 'https://restaurant-backend-one-1.onrender.com/reservationRoute/create-reservation';
     axios
       .post(url, obj)
       .then((res) => {
@@ -53,14 +56,12 @@ const ReservationForm = ({ addReservation }) => {
           setTablesStatus([...tablesStatus.slice(0, selectedTable), 'booked', ...tablesStatus.slice(selectedTable + 1)]);
           setSelectedTable(null);
         } else {
-          Promise.reject();
+          alert('Reservation failed. Please try again.');
         }
       })
       .catch((err) => {
-        alert(err);
+        alert(err.message);
       });
-
-    event.preventDefault();
   };
 
   const handleTableClick = (tableIndex) => {
@@ -94,35 +95,35 @@ const ReservationForm = ({ addReservation }) => {
         <div style={{ display: 'flex', alignItems: 'center', color: '#fff' }}>
           <FaUser style={{ marginRight: '10px' }} />
           <input
-            type='text'
+            type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder='Name'
+            placeholder="Name"
             required
           />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', color: '#fff' }}>
           <FaEnvelope style={{ marginRight: '10px' }} />
           <input
-            type='email'
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder='Email'
+            placeholder="Email"
             required
           />
         </div>
         <div style={{ display: 'flex', alignItems: 'center', color: '#fff' }}>
           <FaCalendar style={{ marginRight: '10px' }} />
           <input
-            type='datetime-local'
+            type="datetime-local"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            placeholder='Date'
+            placeholder="Date"
             required
           />
         </div>
         <h2>Choose a table</h2>
-        <div className='table-buttons'>
+        <div className="table-buttons">
           {tablesStatus.map((status, index) => (
             <React.Fragment key={index}>
               {index % tablesInRow === 0 && index !== 0 && <br />}
@@ -145,13 +146,13 @@ const ReservationForm = ({ addReservation }) => {
           borderRadius: '8px',
         }}
       >
-        <button type='submit'>Submit</button>
+        <button type="submit">Submit</button>
       </form>
       <h4>
-        <Link to='/reservation-details'>View Reservation</Link>
+        <Link to="/reservation-details">View Reservation</Link>
       </h4>
       <h4>
-        <Link to='/update-reservation'>Edit Reservation</Link>
+        <Link to="/update-reservation">Edit Reservation</Link>
       </h4>
       {successMessage && (
         <div
